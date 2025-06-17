@@ -1,0 +1,95 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+  background-color: #0a1433;
+  color: white;
+}
+
+.header {
+  background-image: url('tu-imagen.jpg'); /* Puedes poner la ruta de tu imagen */
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  position: relative;
+  border-bottom: 2px solid #fff2;
+}
+
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(6px);
+  padding: 10px 20px;
+  background: rgba(0, 0, 0, 0.3);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.nav-container .logo {
+  font-weight: bold;
+  font-size: 1.2rem;
+  color: #fff;
+}
+
+nav ul {
+  display: flex;
+  gap: 15px;
+  list-style: none;
+}
+
+nav ul li {
+  color: #fff;
+  cursor: pointer;
+}
+
+.user {
+  font-weight: bold;
+  color: #fff;
+}
+
+.table-container {
+  padding: 20px;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 12px;
+}
+
+thead th {
+  text-align: left;
+  padding: 12px;
+  color: #ffffff;
+  font-weight: 500;
+  border-bottom: 1px solid #ccc;
+}
+
+tbody tr {
+  background-color: #13294b;
+  border-left: 5px solid transparent;
+  transition: background 0.3s ease;
+}
+
+tbody td {
+  padding: 12px;
+  font-size: 0.95rem;
+}
+
+/* Colores de borde para cada juego */
+.color-pink { border-left: 4px solid #ff33cc; border-radius: 6px; }
+.color-red { border-left: 4px solid #ff4d4d; border-radius: 6px; }
+.color-green { border-left: 4px solid #33cc99; border-radius: 6px; }
+.color-yellow { border-left: 4px solid #ffd633; border-radius: 6px; }
+.color-orange { border-left: 4px solid #ff9933; border-radius: 6px; }
+.color-blue { border-left: 4px solid #3399ff; border-radius: 6px; }
+
+tbody tr:hover {
+  background-color: #1b3c6d;
+}
