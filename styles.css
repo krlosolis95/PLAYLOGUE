@@ -10,11 +10,13 @@ body {
   color: white;
 }
 
+
+
 .header {
-  background-image: url('tu-imagen.jpg'); /* Puedes poner la ruta de tu imagen */
+  background-image: url(''); /* Puedes poner la ruta de tu imagen */
   background-size: cover;
   background-position: center;
-  padding: 20px;
+  padding: 30px;
   position: relative;
   border-bottom: 2px solid #fff2;
 }
