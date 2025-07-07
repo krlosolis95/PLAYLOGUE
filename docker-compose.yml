@@ -1,0 +1,38 @@
+services:
+  web:
+    image: php:apache
+    container_name: playlogue_web
+    ports:
+      - "8080:80"
+    volumes:
+      - ./src:/var/www/html
+    depends_on:
+      - db
+
+  db:
+    image: postgres
+    container_name: playlogue_db
+    environment:
+      POSTGRES_DB: playlogue
+      POSTGRES_USER: admin
+      POSTGRES_PASSWORD: aromero12!
+    ports:
+      - "5432:5432"
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+      - ./sql/init.sql:/docker-entrypoint-initdb.d/init.sql:ro
+
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: playlogue_pgadmin
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@playlogue.local
+      PGADMIN_DEFAULT_PASSWORD: aromero12!
+    ports:
+      - "5050:80"
+    depends_on:
+      - db
+
+volumes:
+  pgdata:
+
