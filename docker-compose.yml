@@ -10,7 +10,7 @@ services:
       - db
 
   db:
-    image: postgres
+    image: postgres:17
     container_name: playlogue_db
     environment:
       POSTGRES_DB: playlogue
